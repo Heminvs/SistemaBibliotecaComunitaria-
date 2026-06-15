@@ -7,19 +7,19 @@ public class Livro {
     private String autor;
     private String genero;
     private boolean disponivel;
-    private int idUsuario;
+    private int idDono;
 
     public Livro() {
     }
 
     public Livro(int id, String titulo, String autor,
-                 String genero, boolean disponivel, int idUsuario) {
+                 String genero, boolean disponivel, int idDono) {
         this.id = id;
         this.titulo = titulo;
         this.autor = autor;
         this.genero = genero;
         this.disponivel = disponivel;
-        this.idUsuario = idUsuario;
+        this.idDono = idDono;
     }
 
     public int getId() {
@@ -62,11 +62,11 @@ public class Livro {
         this.disponivel = disponivel;
     }
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public int getIdDono() {
+        return idDono;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdDono(int idDono) {
+        this.idDono = idDono;
     }
 }
