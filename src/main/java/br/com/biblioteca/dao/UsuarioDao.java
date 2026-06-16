@@ -11,6 +11,17 @@ public class UsuarioDao {
 
     public void salvar(Usuario usuario) {
 
+        // Validação dos dados do usuário.
+        if (usuario.getNome().isEmpty()
+                || usuario.getSobrenome().isEmpty()
+                || usuario.getCpf().isEmpty()
+                || usuario.getUsuario().isEmpty()
+                || usuario.getSenha().isEmpty()) {
+
+            System.out.println("Todos os campos devem ser preenchidos.");
+            return;
+        }
+
         if (usuarioExiste(usuario.getCpf(), usuario.getUsuario())) {
             System.out.println("CPF ou usuário já cadastrados.");
             return;
