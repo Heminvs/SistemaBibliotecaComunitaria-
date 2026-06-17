@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="640.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.biblioteca.controller.DashboardController">
+
+    <children>
+
+        <!-- Imagem de fundo -->
+        <ImageView fitHeight="640.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="false">
+
+            <image>
+                <Image url="@imagens/dashboard1.png" />
+            </image>
+
+        </ImageView>
+      <Button fx:id="btnDashboard" layoutX="315.0" layoutY="14.0" mnemonicParsing="false" onAction="#abrirDashboard" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btnAcervo" layoutX="402.0" layoutY="14.0" mnemonicParsing="false" onAction="#abrirAcervo" prefHeight="25.0" prefWidth="48.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btnTrocas" layoutX="468.0" layoutY="14.0" mnemonicParsing="false" onAction="#abrirTrocas" prefHeight="25.0" prefWidth="48.0" style="-fx-background-color: transparent;" />
+      <Button fx:id="btnUsuario" layoutX="535.0" layoutY="14.0" mnemonicParsing="false" onAction="#abrirUsuario" prefHeight="25.0" prefWidth="48.0" style="-fx-background-color: transparent;" />
+      <Label fx:id="lblTotalLivros" layoutX="68.0" layoutY="363.0" text="00">
+         <font>
+            <Font name="Poppins Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTrocados" layoutX="275.0" layoutY="363.0" text="00">
+         <font>
+            <Font name="Poppins Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAnalise" layoutX="475.0" layoutY="363.0" text="00">
+         <font>
+            <Font name="Poppins Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDisponiveis" layoutX="682.0" layoutY="363.0" text="00">
+         <font>
+            <Font name="Poppins Regular" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo1" layoutX="65.0" layoutY="505.0" prefHeight="17.0" prefWidth="151.0" text="Titulo1">
+         <font>
+            <Font name="Poppins Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo2" layoutX="270.0" layoutY="505.0" prefHeight="17.0" prefWidth="151.0" text="Titulo2">
+         <font>
+            <Font name="Poppins Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo3" layoutX="470.0" layoutY="505.0" prefHeight="17.0" prefWidth="151.0" text="Titulo3">
+         <font>
+            <Font name="Poppins Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTitulo4" layoutX="675.0" layoutY="505.0" prefHeight="17.0" prefWidth="151.0" text="Titulo4">
+         <font>
+            <Font name="Poppins Medium" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAutor4" layoutX="675.0" layoutY="522.0" prefHeight="17.0" prefWidth="151.0" text="Autor4" textFill="#a9a096">
+         <font>
+            <Font name="Poppins Medium" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAutor3" layoutX="470.0" layoutY="522.0" prefHeight="17.0" prefWidth="151.0" text="Autor3" textFill="#a9a096">
+         <font>
+            <Font name="Poppins Medium" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAutor2" layoutX="270.0" layoutY="522.0" prefHeight="17.0" prefWidth="151.0" text="Autor2" textFill="#a9a096">
+         <font>
+            <Font name="Poppins Medium" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAutor1" layoutX="65.0" layoutY="522.0" prefHeight="17.0" prefWidth="151.0" text="Autor1" textFill="#a9a096">
+         <font>
+            <Font name="Poppins Medium" size="10.0" />
+         </font>
+      </Label>
+
+
+    </children>
+
+</AnchorPane>

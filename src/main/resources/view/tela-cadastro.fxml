@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="640.0" prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.biblioteca.controller.CadastroController">
+
+   <children>
+
+      <ImageView fitHeight="640.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="false">
+
+         <image>
+            <Image url="@imagens/cadastro3.png" />
+         </image>
+
+      </ImageView>
+      <TextField fx:id="txtNome" layoutX="509.0" layoutY="190.0" prefHeight="34.0" prefWidth="321.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="txtSobrenome" layoutX="509.0" layoutY="251.0" prefHeight="34.0" prefWidth="321.0" style="-fx-background-color: trasnparent;" />
+      <TextField fx:id="txtCpf" layoutX="509.0" layoutY="312.0" prefHeight="34.0" prefWidth="321.0" style="-fx-background-color: trasnparent;" AnchorPane.bottomAnchor="294.0" />
+      <TextField fx:id="txtUsuario" layoutX="509.0" layoutY="373.0" prefHeight="34.0" prefWidth="321.0" style="-fx-background-color: trasnparent;" />
+      <PasswordField fx:id="txtSenha" layoutX="509.0" layoutY="434.0" prefHeight="34.0" prefWidth="321.0" style="-fx-background-color: tranparent;" />
+      <Button fx:id="btnCadastrar" layoutX="509.0" layoutY="487.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="321.0" style="-fx-background-color: transparent;" />
+
+   </children>
+
+</AnchorPane>
