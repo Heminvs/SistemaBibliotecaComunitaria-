@@ -2,6 +2,7 @@ package br.com.biblioteca.controller;
 
 import br.com.biblioteca.dao.UsuarioDao;
 import br.com.biblioteca.model.Usuario;
+import br.com.biblioteca.sessao.Sessao; // Certifique-se que o import está correto
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -39,6 +40,7 @@ public class CadastroController {
         try {
             Usuario usuario = new Usuario();
             usuario.setNome(txtNome.getText());
+            usuario.setNome(txtNome.getText());
             usuario.setSobrenome(txtSobrenome.getText());
             usuario.setCpf(txtCpf.getText());
             usuario.setUsuario(txtUsuario.getText());
@@ -47,7 +49,11 @@ public class CadastroController {
             UsuarioDao dao = new UsuarioDao();
             dao.salvar(usuario);
 
-            mostrarAlerta("Sucesso", "Cadastro realizado com sucesso!", Alert.AlertType.INFORMATION);
+            // Logando usuario automaticamente
+            Usuario usuarioLogado = dao.fazerLogin(usuario.getUsuario(), usuario.getSenha());
+            Sessao.setUsuarioLogado(usuarioLogado);
+
+            mostrarAlerta("Sucesso", "Cadastro realizado e login efetuado!", Alert.AlertType.INFORMATION);
             abrirDashboard();
 
         } catch (Exception e) {
@@ -62,7 +68,7 @@ public class CadastroController {
             stage.setScene(new Scene(root));
             stage.show();
         } catch (Exception e) {
-            mostrarAlerta("Erro", "Erro ao abrir o sistema.", Alert.AlertType.ERROR);
+            mostrarAlerta("Erro", "Erro ao abrir o sistema: " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 }
